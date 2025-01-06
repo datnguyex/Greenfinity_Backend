@@ -1,0 +1,40 @@
+{
+    "name": "nodejs",
+    "version": "1.0.0",
+    "main": "src/index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "nodemon --inspect src/index.js",
+        "watch": "node-sass --watch src/resource/scss/ --output src/public/css/"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/datnguyex/NodeJS.git"
+    },
+    "keywords": [
+        "NguyenDat",
+        "NodeJS"
+    ],
+    "author": "NguyenThanhDat",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/datnguyex/NodeJS/issues"
+    },
+    "homepage": "https://github.com/datnguyex/NodeJS#readme",
+    "description": "",
+    "dependencies": {
+        "express": "^4.19.2",
+        "express-handlebars": "^8.0.1",
+        "handlebars": "^4.7.8",
+        "method-override": "^3.0.0",
+        "mongoose": "^8.9.3",
+        "mongoose-delete": "^1.0.2",
+        "mongoose-sequence": "^6.0.1",
+        "mongoose-slug-updater": "^3.3.0",
+        "morgan": "^1.10.0",
+        "nodemon": "^3.1.7"
+    },
+    "devDependencies": {
+        "node-sass": "^9.0.0"
+    }
+}
