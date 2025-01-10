@@ -4,10 +4,18 @@ const morgan = require('morgan');
 const handlebars = require('express-handlebars');
 const path = require('path');
 const app = express();
-const port = 3000;
+const port = 3001;
+const cors = require('cors');
+
+//su dung env
+require('dotenv').config();
 
 const route = require('./routes');
 const db = require('./config/db');
+
+// Cấu hình middleware CORS
+app.use(cors()); // Cho phép tất cả các miền gửi yêu cầu đến server này
+app.use(cors({ origin: 'http://localhost:3000' }));
 
 // Kết nối với cơ sở dữ liệu
 db.connect();

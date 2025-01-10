@@ -23,16 +23,23 @@
     "homepage": "https://github.com/datnguyex/NodeJS#readme",
     "description": "",
     "dependencies": {
-        "express": "^4.19.2",
+        "bcryptjs": "^2.4.3",
+        "cors": "^2.8.5",
+        "dotenv": "^16.4.7",
+        "express": "^4.21.2",
         "express-handlebars": "^8.0.1",
+        "follow-redirects": "^1.15.9",
         "handlebars": "^4.7.8",
+        "joi": "^17.13.3",
+        "jsonwebtoken": "^9.0.2",
         "method-override": "^3.0.0",
         "mongoose": "^8.9.3",
         "mongoose-delete": "^1.0.2",
         "mongoose-sequence": "^6.0.1",
         "mongoose-slug-updater": "^3.3.0",
         "morgan": "^1.10.0",
-        "nodemon": "^3.1.7"
+        "nodemon": "^3.1.7",
+        "random": "^5.1.1"
     },
     "devDependencies": {
         "node-sass": "^9.0.0"
