@@ -1,8 +1,10 @@
+// src/routes/Authenication.js
 const express = require('express');
 const router = express.Router();
 
 const NewsController = require('../app/controllers/NewsController');
 const AuthenticationsController = require('../app/controllers/AuthenticationsController');
+const Authentication = require('../Middleware/Authentication'); // Đảm bảo import đúng
 
 router.post('/createTemporaryAccount', AuthenticationsController.createTemporaryAccount);
 router.post('/signup', AuthenticationsController.signup);

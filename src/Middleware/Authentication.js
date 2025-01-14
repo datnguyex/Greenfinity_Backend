@@ -1,9 +1,11 @@
+// Authentication middleware (authentication.js)
 const jwt = require('jsonwebtoken');
-const User = require('../models/User');
-export const Authentication = async (req, res, next) => {
+const User = require('../app/models/User');
+
+const Authentication = async (req, res, next) => {
     const secretKey = process.env.SECRET_KEY;
     try {
-        const token = req.header('Authorization')?.split(' ')[1];
+        const token = req.header('Authorization')?.split(' ')[1]; // Lấy token từ header
         if (!token) {
             return res.status(403).json({
                 message: 'You are not logged in',
@@ -18,6 +20,7 @@ export const Authentication = async (req, res, next) => {
             });
         }
 
+        req.user = user; // Thêm thông tin người dùng vào request nếu cần thiết
         next();
     } catch (error) {
         return res.status(500).json({
@@ -26,3 +29,6 @@ export const Authentication = async (req, res, next) => {
         });
     }
 };
+
+// Xuất middleware mà không cần tạo instance
+module.exports = Authentication;
